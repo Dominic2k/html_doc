@@ -1,1 +1,75 @@
-Welcome to profile web of Venus
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body bgcolor="black">
+	<img src="C:\Users\KA\Documents\Web Dev\Banner.gif" width="100%" height="200">
+	<br>
+	<font color="white">
+		Excite@Home
+		<font color="red">
+			<u>
+				Reduces workforce
+			</u>
+		</font>
+
+		as operations wind down.
+	<br>
+	<br>
+	<br>
+
+		Excite@Home Announces AT&T 
+		<font color="red">
+			<u>
+				Termination of Pending Assets Purchase Agreement
+			</u>
+		</font>
+		and Transition Agreements with Several Cable companies
+	<br>
+		<font color="red">
+				<u>
+				Archived press releases
+				</u>
+		</font>
+
+	<br>
+
+		Vendor Infomation:
+	<br>
+
+		Excite@Home has established a Vendor Infomation Hotline to answer question you may have regarding the company's recent filing for reogranization. For information, please call (650) 556-2868 or email 
+
+		<font color="blue">
+			<u>
+				Vendor_Communications@excitehome.net.
+			</u>
+		</font>
+		<br>
+		<img src="C:\Users\KA\Documents\Web Dev\WORK.GIF">
+
+	<br>
+
+<font color="blue">
+	<u>
+				http://work.home.net/
+	</u>
+</font>
+
+ with high-speed, fully managed data services designed to meet demand for superior, reliable, and secure network communications.
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+		<font color="gray" size="-1">
+			Copyright (c) 1995-2002 At Home Corporation. All Rights Reserved. @Home, Excite@Home, @Work, Excite, and @ are the trademarks of At Home Corporation, and may be registered in certain jurisdictions. Legal Notices
+		</font>
+	</font>
+</body>
+</html>
