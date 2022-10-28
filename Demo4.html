@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		#div_tong{
+			width: 100%;
+			height: 2000px;
+			background:pink ;		
+		}
+		#div_tren{
+			width: 100%;
+			height: 20%;
+			background: red;
+		}
+		#div_duoi{
+			width: 100%;
+			height: 80%;
+			background: white;
+		}
+		#div_tren > .trai{
+			width: 50%;
+			height: 100%;
+			background: yellow;
+			float: left;
+		}
+		#div_tren > .phai{
+			width: 50%;
+			height: 100%;
+			background: black;
+			float: left;
+		}
+		#div_tren > .phai > .tren {
+			width: 100%;
+			height: 50%;
+			background: purple;
+			text-align: right;
+
+		}
+	</style>
+</head>
+<body>
+	<div id="div_tong">
+		<div id="div_tren">
+			<div class="trai">
+				<img src="https://static.wikia.nocookie.net/naruto/images/d/d8/Kakashi2.png/revision/latest?cb=20210723122843&path-prefix=vi" style="height: 100%;" width="100%">	
+			</div>
+			<div class="phai">
+				<div class="tren">
+					<form>
+						<select>
+							<option>Hội đam mê xe độ</option>
+						</select>
+						<button>Gâu gâu</button>
+					</form>
+				</div>
+				
+			</div>
+		</div>
+		<div id="div_duoi" style="position: fixed; bottom: 0; left: 0; ">
+			Xin chào tất cả mọi người
+		</div>	
+	</div>
+</body>
+</html>
