@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<form>
+	Nhập tên của bạn:
+	<input type="text" id="input_ten">
+	<br>
+	<button type="button" onclick="in_ra()">Kiểm tra IQ</button>
+	</form>
+	<div id="ket_qua">
+	</div>
+	<script type="text/javascript">
+		function in_ra(argument) {
+			// body...
+			let ten = document.getElementById('input_ten').value;
+		document.getElementById('ket_qua').innerHTML = 'Xin chào bạn '+ ten + '.Cảm ơn bạn đã ghé thăm trang web của mình';
+	}
+	</script>
+</body>
+</html>
