@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<form>
+		Nhập số phần tử của mảng
+		<input type="number" id="input_so">
+		<br>
+		<button type="button" onclick="phat_sinh()">Phát sinh ra mảng</button>
+	</form>
+	<div id="ket_qua"></div>
+<script type="text/javascript">
+	function phat_sinh() {
+		let so = parseFloat(document.getElementById('input_so').value);
+		let mang = [];
+		let so_ngau_nhien;
+		// let so_lon_nhat;
+		for(let i = 0; i < so; i++){
+			so_ngau_nhien = Math.floor(Math.random() * 10);
+			mang.push(so_ngau_nhien);
+		}
+		let so_lon_nhat = mang[0]
+		for (let i = 1; i < mang.length; i++){
+			if(so_lon_nhat < mang[i]){
+				so_lon_nhat = mang[i];
+			}
+		}
+		document.getElementById('ket_qua').innerHTML = mang + '. Số lớn nhất là :' + so_lon_nhat;
+	}
+</script>
+</body>
+</html>
