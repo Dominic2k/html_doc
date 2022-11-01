@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<form>
+	Nhập số:
+	<input type="number" id="input_so">
+	<br>
+	<button type="button" onclick="kiem_tra()">Kiểm tra số nguyên tố</button>
+</form>
+<div id="ket_qua"></div>
+<script type="text/javascript">
+	function kiem_tra(){
+		let so = parseInt(document.getElementById('input_so').value);
+		let dem_chia_het = 0;
+		let ket_qua;
+		for(let i = 1; i <= so; i++){
+			if(so % 1 == 0){
+				dem_chia_het++;
+			}
+		}
+		if(dem_chia_het == 2){
+			ket_qua = 'Đúng';
+		} else {
+			ket_qua = 'Sai';
+		}
+		document.getElementById('ket_qua').innerHTML = ket_qua;
+}
+</script>
+</body>
+</html>
