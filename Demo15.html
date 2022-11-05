@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	Nhập số gì đó đi :
+	<input type="number" id="input_number">
+	<button onclick="hien_thi()">
+		Hiển thị
+	</button>
+	<div id="ket_qua"></div>
+<script type="text/javascript">
+	function lay_so() {
+		return document.getElementById('input_number').value;
+	}
+	function hien_thi(){
+		let so = lay_so();
+		document.getElementById('ket_qua').innerHTML = 'Bạn đẫ nhập số :' + so;
+	}
+</script>
+
+</body>
+</html>
