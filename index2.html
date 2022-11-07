@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		.span_loi{
+			color: darkred;
+		}
+	</style>
+</head>
+<body>
+<form>
+	Tên
+	<input type="text" id="ten">
+    <span id="loi_ten" class="span_loi"></span>
+	<br>
+    Ngày sinh
+    <input type="date" id="ngay_sinh">
+    <span id="loi_ngay_sinh" class="span_loi"></span>
+    <br>
+    Giới tính
+    <input type="radio" name="gioi_tinh">Nam
+    <input type="radio" name="gioi_tinh">Nữ
+    <span id="loi_gioi_tinh" class="span_loi"></span>
+    <br>
+    Email
+    <input type="email" id="email">
+    <br>
+    Mật khẩu 
+    <input type="password" id="mat_khau">
+    <span id="loi_mat_khau" class="span_loi"></span>
+    <br>
+    Lớp
+	<select>
+		<option>Lập trình</option>
+		<option>Bảo mật</option>
+		<option>Dạy học</option>
+	</select>
+    <br>
+    <button type="button" onclick="return kiem_tra()">Đăng kí</button>
+</form>
+<script>
+function kiem_tra()
+{
+    let kiem_tra_loi = false;
+    // ten
+    let ten = document.getElementById('ten').value;
+    if (ten.length === 0)
+    {
+        document.getElementById('loi_ten').innerHTML = 'Tên không được để trống';
+        kiem_tra_loi = true;
+    }else{
+        let regex_ten = /^([A-ZÀÁÃẠẢĂẮẰẲẴẶÂẤẦẨẪẬÈÉẸẺẼÊỀẾỂỄỆĐÌÍĨỈỊÒÓÕỌỎÔỐỒỔỖỘƠỚỜỞỠỢÙÚŨỤỦƯỨỪỬỮỰỲỴỶỸÝ][a-zàáãạảăắằẳẵặâấầẩẫậèéẹẻẽêềếểễệđìíĩỉịòóõọỏôốồổỗộơớờởỡợùúũụủưứừửữựỳỵỷỹý]{1,6} ?)+$/;
+        if(regex_ten.test(ten) == false){
+            document.getElementById('loi_ten').innerHTML = 'Tên không hợp lệ !';
+            kiem_tra_loi = true;
+        }else {document.getElementById('loi_ten').innerHTML = '';
+    }
+    }
+    // ngày sinh
+    let ngay_sinh = document.getElementById('ngay_sinh').value;
+    if (ngay_sinh.length === 0)
+    {
+        document.getElementById('loi_ngay_sinh').innerHTML = 'Ngày sinh không được để trống';
+        kiem_tra_loi = true;
+    }else {document.getElementById('loi_ngay_sinh').innerHTML = '';
+    }
+    // giới tính
+    // let mang_gioi_tinh = document.getElementsByName('gioi_tinh');
+    // let kiem_tra_gioi_tinh = false;
+    // for(let i = 0; i < mang_gioi_tinh.length; i++){
+    //     if(mang_gioi_tinh[i].Checked){
+    //         kiem_tra_gioi_tinh = true;
+    //     }
+    // }
+    // if (kiem_tra_gioi_tinh == false){
+    //     document.getElementById('loi_gioi_tinh').innerHTML = 'Tick giới tính đi bạn êy';
+    //     kiem_tra_loi = true;
+    // }else {
+    //         document.getElementById('loi_gioi_tinh').innerHTML = 'OK';
+    //     }
+    let arr_gender = document.getElementsByName('gioi_tinh');
+    let gender_check = false;
+    for(let i = 0; i < arr_gender.length; i++){
+        if(arr_gender[i].checked){
+            gender_check = true;
+        }
+    }
+    if(gender_check == false){
+        document.getElementById('loi_gioi_tinh').innerHTML = 'Vui lòng chọn giới tính';
+        error_check = false;
+    }
+    else{
+        document.getElementById('loi_gioi_tinh').innerHTML = '';
+    }
+    // mật khẩu
+    let mat_khau = document.getElementById('mat_khau').value;
+    if(mat_khau.length ===0){
+        document.getElementById('loi_mat_khau').innerHTML = 'Mật khẩu không được để trống';
+        kiem_tra_loi = true;
+    }else if(mat_khau.length < 8){
+        document.getElementById('loi_mat_khau').innerHTML = 'Mật khẩu không được quá ngắn, dễ bị hack đó đò ngốc ạ';
+        kiem_tra_loi = true;
+    }
+    else { 
+        document.getElementById('loi_mat_khau').innerHTML = '';
+    }
+
+    if(kiem_tra_loi){
+        return false;
+    }
+
+}
+</script>
+</body>
+</html>
