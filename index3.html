@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="hien_thi()">Hiển thị</button>
+    <div id="ket_qua"></div>
+<script>
+    function hien_thi(){
+        let mang = [];
+        let so_ngau_nhien;
+        for(let i = 0; i < 10; i++ ){
+            do{so_ngau_nhien = Math.ceil(Math.random() * 10);
+                if(!mang.includes(so_ngau_nhien)){
+                    break;
+                }
+            }
+            while(true);
+            mang.push(so_ngau_nhien);
+        }
+        document.getElementById('ket_qua').innerHTML = mang;
+    }
+</script>
+</body>
+</html>
